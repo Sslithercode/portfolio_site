@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function ProjectsSection() {
   const featuredProject = projects.find((p) => 'featured' in p && p.featured);
-
+  // fixed it
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
