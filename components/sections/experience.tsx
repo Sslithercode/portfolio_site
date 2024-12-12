@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { experience } from "@/lib/data/experience";
 import { Badge } from "@/components/ui/badge";
-
+// fix impl
 export function ExperienceSection() {
   return (
     <section className="py-20">

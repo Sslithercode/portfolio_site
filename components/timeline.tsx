@@ -10,7 +10,7 @@ const icons = {
   Brain,
   Rocket,
 } as const;
-
+// fixed issues
 export function Timeline() {
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -78,7 +78,7 @@ export function Timeline() {
                     <p className="text-sm text-muted-foreground">
                       {item.description}
                     </p>
-                    {item.milestones && (
+                    {'milestones' in item && item.milestones && (
                       <ul className="mt-2 text-sm text-muted-foreground">
                         {item.milestones.map((milestone, i) => (
                           <li key={i} className="flex items-center gap-2">
@@ -98,8 +98,7 @@ export function Timeline() {
               </div>
             </div>
           );
-        })}
-      </div>
+        })}      </div>
     </div>
   );
 }
