@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function ProjectsSection() {
-  const featuredProject = projects.find((p) => p.featured);
+  const featuredProject = projects.find((p) => 'featured' in p && p.featured);
 
   return (
     <section id="projects" className="py-20">
@@ -47,7 +47,7 @@ export function ProjectsSection() {
 
         {/* Other Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.filter(p => !p.featured).map((project, index) => (
+          {projects.filter(p => !('featured' in p) || !p.featured).map((project, index) => (
             <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
               <p className="text-muted-foreground mb-4">{project.description}</p>
