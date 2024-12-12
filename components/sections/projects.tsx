@@ -21,11 +21,10 @@ export function ProjectsSection() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="aspect-video relative rounded-lg overflow-hidden">
                 <iframe  src="https://www.youtube.com/embed/u0RF93M48Ig?si=I4hX-O10JK_lgoU6" 
-                  title="YouTube video player" frameborder="0" 
+                  title="YouTube video player" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   className="absolute inset-0 w-full h-full"
-                  allowFullScreen
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  allowFullScreen></iframe>
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-semibold">{featuredProject.title}</h3>
